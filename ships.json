@@ -1,0 +1,296 @@
+[
+  {
+    "id": 642367,
+    "name": "Идегей",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54068,
+    "name": "Москва-24",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642895,
+    "name": "Филька",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 54052,
+    "name": "ОМ-349",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54039,
+    "name": "Алина Браво",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642941,
+    "name": "Неглинка",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 53988,
+    "name": "Москва-21",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642511,
+    "name": "Рио",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 53992,
+    "name": "Москва-51",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642906,
+    "name": "Сетунь",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 54049,
+    "name": "Флагман",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54010,
+    "name": "Столица-2",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54040,
+    "name": "Прага",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54047,
+    "name": "Организатор",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54086,
+    "name": "Святогор",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642463,
+    "name": "Романтика",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54194,
+    "name": "Адмиралъ",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54054,
+    "name": "Роза Ветров",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54033,
+    "name": "Фараон",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642394,
+    "name": "М-88",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54038,
+    "name": "Алина Прима",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 568234,
+    "name": "Удача",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54036,
+    "name": "Конкорд",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642876,
+    "name": "Синичка",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 14711,
+    "name": "Волна",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54057,
+    "name": "Москва-46",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54073,
+    "name": "Юнга",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54048,
+    "name": "Михаил Сеспель",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54009,
+    "name": "Столица-1",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642940,
+    "name": "Яуза",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 568235,
+    "name": "Москва Ривер",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642858,
+    "name": "Флагман",
+    "codeclass": "small",
+    "codesubclass": null
+  },
+  {
+    "id": 642942,
+    "name": "Раменка",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 568231,
+    "name": "Фортуна",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 53989,
+    "name": "Москва-28",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54076,
+    "name": "Снегири-2",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54051,
+    "name": "Алексия",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 568141,
+    "name": "Морис",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642508,
+    "name": "Олимпиада",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642931,
+    "name": "Пресня",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 54053,
+    "name": "Вещий Олег",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54018,
+    "name": "Венеция",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 53993,
+    "name": "Москва-61",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642949,
+    "name": "Грачевка",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 642952,
+    "name": "Химка",
+    "codeclass": "pass",
+    "codesubclass": "electro"
+  },
+  {
+    "id": 642407,
+    "name": "Счастье",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54063,
+    "name": "Добрыня",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54077,
+    "name": "Снегири-3",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642605,
+    "name": "Свобода",
+    "codeclass": "pass",
+    "codesubclass": null
+  }
+]

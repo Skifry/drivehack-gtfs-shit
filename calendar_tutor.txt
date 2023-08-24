@@ -1,0 +1,13 @@
+service_id = c{date}
+
+monday
+tuesday
+wednesday
+thursday
+friday
+saturday
+sunday
+(detect today's day and select it to = 1, others = 0)
+
+start_date = schedule[].timetable.day
+end_date = schedule[].timetable.day

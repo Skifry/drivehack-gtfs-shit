@@ -1,0 +1,11 @@
+use docks.json
+
+stop_id -> [].id                may add indexes in someway for platforms
+stop_name -> [].name_mark       add platform index in brackets
+stop_lat -> [].geopoint[0]      station location
+stop_lon -> [].geopoint[1]
+loaction_type                   1 - station     0 - platform
+parent_station                  only for platforms (id of station)
+platform_code                   index of platform
+
+generate platforms from schedule.json

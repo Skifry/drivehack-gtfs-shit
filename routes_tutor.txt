@@ -1,0 +1,10 @@
+route_id -> schedule[].route.id 
+agency_id = MST
+route_short_name -> schedule[].route.abbrev
+route_long_name -> schedule[].route.nameroute
+route_type = 4
+route_url = https://t.mos.ru/reka/routes
+continuous_pickup = 1       two of this may be empty
+continuous_drop_off = 1
+
+network_id                  todo: generate for electro / non electro

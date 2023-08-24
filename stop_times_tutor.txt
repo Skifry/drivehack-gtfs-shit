@@ -1,0 +1,6 @@
+trip_id -> use trips for gathering this data
+arrival_time -> schedule[].timetable
+departure_time -> schedule[].timetable
+stop_id -> use stops for gathering this data
+stop_sequence -> calculate from schedule
+stop_headsign -> boat name

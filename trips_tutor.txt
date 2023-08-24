@@ -1,0 +1,6 @@
+route_id -> use routes generator for this data
+service_id -> use calendar generator for this data
+trip_id -> schedule[].id
+trip_headsign -> schedule[].route.abbrev
+
+shape_id -> ? todo later
