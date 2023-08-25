@@ -8,6 +8,7 @@ DS_CLIENTS = set()
 TM_CLIENTS = set()
 
 ctime = 1692946800
+zip_timeout = 10
 ds_compl = ()
 
 data = json.load(open('tel.json'))
@@ -29,7 +30,7 @@ async def handler(websocket):
 async def emulator():
     global ctime, ds_compl
     while True:
-        if ctime % 60 == 0:
+        if ctime % zip_timeout == 0:
             ds_docks = json.load(open('./dataset/docks.json'))
             ds_schedule = json.load(open('./dataset/schedule.json'))
             ds_ships = json.load(open('./dataset/ships.json'))

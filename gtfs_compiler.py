@@ -5,7 +5,7 @@ import os
 import shutil
 import datetime
 
-now = 1692910800
+nowGL = 1692910800
 
 class hashabledict(dict):
     def __hash__(self):
@@ -21,7 +21,10 @@ def fileWriter(head, rows, filename):
                 row[idx] = ''
             elif type(item) == bool:
                 row[idx] = int(item)
-            row[idx] = str(row[idx])
+            if str(row[idx]) == 'None':
+                row[idx] = ''
+            else:
+                row[idx] = str(row[idx])
         lines.append(','.join(row) + '\n')
         
     
@@ -42,9 +45,9 @@ def compileGTFS(ds_compl, folder):
     # today_datea = datetime.date.today().timetuple().tm_yday
     # today_frmt = datetime.date.today().strftime('%Y%m%d')
 
-    today_wk = datetime.datetime.fromtimestamp(1692824400).weekday()
-    today_datea = datetime.date.fromtimestamp(1692824400).timetuple().tm_yday
-    today_frmt = datetime.date.fromtimestamp(1692824400).strftime('%Y%m%d')
+    today_wk = datetime.datetime.fromtimestamp(nowGL).weekday()
+    today_datea = datetime.date.fromtimestamp(nowGL).timetuple().tm_yday
+    today_frmt = datetime.date.fromtimestamp(nowGL).strftime('%Y%m%d')
 
     SERVICE_ID = f'c{today_datea}'
     calendar_row = [SERVICE_ID, False, False, False, False, False, False, False, today_frmt, today_frmt]
@@ -95,7 +98,7 @@ def compileGTFS(ds_compl, folder):
     for schedule in ds_compl['schedule']:
         if schedule['changed_schedule']['type'] == 2:
             continue
-        if schedule['timetable']['startdate'] != 1692824400:
+        if schedule['timetable']['startdate'] != nowGL:
             continue
         n_schedule.append(schedule)
     ds_compl['schedule'] = n_schedule
@@ -187,10 +190,15 @@ def compileGTFS(ds_compl, folder):
         counter = 0
         schlist = scroutes[trip_id]
         for sch in [s[1] for s in schlist]:
-            now = datetime.datetime.fromtimestamp(1692824400)
+            now = datetime.datetime.fromtimestamp(nowGL)
             today = datetime.datetime(now.year, now.month, now.day, tzinfo=datetime.timezone(datetime.timedelta(hours=3)))
             arrival = (today + datetime.timedelta(minutes=float(sch['timetable']['starttime']))).strftime('%H:%M:%S')
             departure = (today + datetime.timedelta(minutes=float(sch['timetable']['endtime']))).strftime('%H:%M:%S')
+            if sch['timetable']['startdate'] != sch['timetable']['enddate']:
+                arrival = str(int(arrival[:2]) + 1) + arrival[2:]
+                departure = str(int(departure[:2]) + 1) + departure[2:]
+                if len(arrival) != 8: arrival = '0' + arrival
+                if len(departure) != 8: departure = '0' + departure
             stop_sequence = counter
             berth_letter = sch['changed_schedule']['berth_letter'] or sch['position']['berth_letter']
             stop_id = f"{sch['dock']['id']}_{berth_letter}"
