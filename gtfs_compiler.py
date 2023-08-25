@@ -23,11 +23,11 @@ def fileWriter(head, rows, filename):
         lines.append(','.join(row) + '\n')
         
     
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding='utf8') as f:
         f.writelines(lines)
 
 def compileGTFS(ds_compl):
-    folder = f"gtfs{str(int(time.time()))}"
+    folder = f"gtfs479111"
     os.makedirs(folder)
 
     # static generation
@@ -47,7 +47,6 @@ def compileGTFS(ds_compl):
     SERVICE_ID = f'c{today_datea}'
     calendar_row = [SERVICE_ID, False, False, False, False, False, False, False, today_frmt, today_frmt]
     calendar_row[1 + today_wk] = True
-    f_calendar = [calendar_head, calendar_row]
 
 
     # stops generation
@@ -162,6 +161,8 @@ def compileGTFS(ds_compl):
     for k, v in scroutes.items():
         scroutes[k].sort(key=lambda v: v[0])
 
+    # json.dump(scroutes, open('scroutes.json', 'w', encoding='utf8'))
+
     for srtid, schlist in scroutes.items():
         schedule = schlist[0][1]
         trip_id = srtid
@@ -210,9 +211,10 @@ def compileGTFS(ds_compl):
 
     shutil.make_archive(f'./{folder}', 'zip', f'./{folder}')
 
-ds_docks = json.load(open('./dataset/docks.json', encoding="utf8"))
-ds_schedule = json.load(open('./dataset/schedule.json', encoding="utf8"))
-ds_ships = json.load(open('./dataset/ships.json', encoding="utf8"))
+if __name__ == "__main__":
+    ds_docks = json.load(open('./dataset/docks.json', encoding="utf8"))
+    ds_schedule = json.load(open('./dataset/schedule.json', encoding="utf8"))
+    ds_ships = json.load(open('./dataset/ships.json', encoding="utf8"))
 
-ds_compl = {'docks': ds_docks, 'schedule': ds_schedule, 'ships': ds_ships}
-compileGTFS(ds_compl)
+    ds_compl = {'docks': ds_docks, 'schedule': ds_schedule, 'ships': ds_ships}
+    compileGTFS(ds_compl)
