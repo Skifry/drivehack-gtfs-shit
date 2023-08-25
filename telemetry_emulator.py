@@ -2,11 +2,12 @@ import asyncio
 from websockets.server import serve
 
 import json
+import time
 
 DS_CLIENTS = set()
 TM_CLIENTS = set()
 
-ctime = 1692688349
+ctime = 1692946800
 ds_compl = ()
 
 data = json.load(open('tel.json'))
@@ -29,11 +30,12 @@ async def emulator():
     global ctime, ds_compl
     while True:
         if ctime % 60 == 0:
-            ds_docks = json.load(open('docks.json'))
-            ds_schedule = json.load(open('schedule.json'))
-            ds_ships = json.load(open('ships.json'))
+            ds_docks = json.load(open('./dataset/docks.json'))
+            ds_schedule = json.load(open('./dataset/schedule.json'))
+            ds_ships = json.load(open('./dataset/ships.json'))
+            ds_amenity = json.load(open('./dataset/amenity.json'))
             
-            ds_compl = {'msg_type': 'ds', 'docks': ds_docks, 'schedule': ds_schedule, 'ships': ds_ships}
+            ds_compl = {'msg_type': 'ds', 'docks': ds_docks, 'schedule': ds_schedule, 'ships': ds_ships, 'amenity': ds_amenity}
 
             for client in DS_CLIENTS:
                 await client.send(json.dumps(ds_compl))

@@ -6,6 +6,12 @@
     "codesubclass": null
   },
   {
+    "id": 54094,
+    "name": "Кристалл",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
     "id": 54068,
     "name": "Москва-24",
     "codeclass": "pass",
@@ -18,14 +24,32 @@
     "codesubclass": "electro"
   },
   {
+    "id": 546206,
+    "name": "Советский союз",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
     "id": 54052,
     "name": "ОМ-349",
     "codeclass": "pass",
     "codesubclass": null
   },
   {
+    "id": 568237,
+    "name": "Мария",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
     "id": 54039,
     "name": "Алина Браво",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 54092,
+    "name": "Мария",
     "codeclass": "pass",
     "codesubclass": null
   },
@@ -104,12 +128,6 @@
   {
     "id": 54054,
     "name": "Роза Ветров",
-    "codeclass": "pass",
-    "codesubclass": null
-  },
-  {
-    "id": 54033,
-    "name": "Фараон",
     "codeclass": "pass",
     "codesubclass": null
   },
@@ -246,6 +264,12 @@
     "codesubclass": null
   },
   {
+    "id": 54042,
+    "name": "Алина Танго",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
     "id": 54018,
     "name": "Венеция",
     "codeclass": "pass",
@@ -262,6 +286,18 @@
     "name": "Грачевка",
     "codeclass": "pass",
     "codesubclass": "electro"
+  },
+  {
+    "id": 54043,
+    "name": "Вдохновение",
+    "codeclass": "pass",
+    "codesubclass": null
+  },
+  {
+    "id": 642932,
+    "name": "Вдохновение",
+    "codeclass": "pass",
+    "codesubclass": null
   },
   {
     "id": 642952,

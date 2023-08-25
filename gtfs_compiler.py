@@ -5,6 +5,8 @@ import os
 import shutil
 import datetime
 
+now = 1692910800
+
 class hashabledict(dict):
     def __hash__(self):
         return hash(tuple(sorted(self.items())))
@@ -26,8 +28,8 @@ def fileWriter(head, rows, filename):
     with open(filename, 'w', encoding='utf8') as f:
         f.writelines(lines)
 
-def compileGTFS(ds_compl):
-    folder = f"gtfs479111"
+def compileGTFS(ds_compl, folder):
+    # folder = f"gtfs479111"
     os.makedirs(folder)
 
     # static generation
@@ -202,11 +204,26 @@ def compileGTFS(ds_compl):
             counter += 1
 
 
+    # generate CUSTOM TYPE amenities
+    amenities_head = ['ship_id', 'ship_name']
+    amenities_rows = []
+    for k, _ in ds_compl['amenity'][0]['amenity'].items():
+        amenities_head.append(k)
+    for amenityRow in ds_compl['amenity']:
+        shipId = amenityRow['id']
+        shipName = amenityRow['name']
+        amenity_row = [shipId, shipName]
+        for amenity in amenityRow['amenity'].values():
+            amenity_row.append(amenity)
+
+        amenities_rows.append(amenity_row)
+
     fileWriter(calendar_head, [calendar_row], f'./{folder}/calendar.txt')
     fileWriter(stops_head, stops_rows, f'./{folder}/stops.txt')
     fileWriter(routes_head, routes_rows, f'./{folder}/routes.txt')
     fileWriter(stop_times_head, stop_times_rows, f'./{folder}/stop_times.txt')
     fileWriter(trips_head, trips_rows, f'./{folder}/trips.txt')
+    fileWriter(amenities_head, amenities_rows, f'./{folder}/amenity.txt')
 
 
     shutil.make_archive(f'./{folder}', 'zip', f'./{folder}')
@@ -215,6 +232,7 @@ if __name__ == "__main__":
     ds_docks = json.load(open('./dataset/docks.json', encoding="utf8"))
     ds_schedule = json.load(open('./dataset/schedule.json', encoding="utf8"))
     ds_ships = json.load(open('./dataset/ships.json', encoding="utf8"))
+    ds_amenity = json.load(open('./dataset/amenity.json', encoding="utf8"))
 
-    ds_compl = {'docks': ds_docks, 'schedule': ds_schedule, 'ships': ds_ships}
-    compileGTFS(ds_compl)
+    ds_compl = {'docks': ds_docks, 'schedule': ds_schedule, 'ships': ds_ships, 'amenity': ds_amenity}
+    compileGTFS(ds_compl, 'peniss')
